@@ -24,11 +24,12 @@
 }
 
 body {
-  @apply m-0 min-h-screen text-white antialiased flex items-center justify-center p-4 overflow-x-hidden transition-colors duration-1000;
-  background: #0f172a linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1534088568595-a066f710b721?auto=format&fit=crop&w=1920&q=80');
+  @apply m-0 min-h-screen text-white antialiased flex items-center justify-center p-4 overflow-x-hidden transition-all duration-1000;
+  background: #0f172a linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('/bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #root {
