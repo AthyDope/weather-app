@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "RoRoboto", sans-serif;
+  --radius-glass: 3.5rem;
+  --radius-card: 2.2rem;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --border-glass: rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-main {
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-glass);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+@utility glass-card-inner {
+  background-color: var(--color-glass);
+  backdrop-filter: blur(32px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-card);
+}
+
+body {
+  @apply m-0 min-h-screen text-white antialiased flex items-center justify-center p-4 overflow-x-hidden transition-colors duration-1000;
+  background: #0f172a linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1534088568595-a066f710b721?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#root {
+  @apply w-full max-w-6xl mx-auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    @apply items-start overflow-y-auto;
+  }
+  #root {
+    @apply max-h-none h-auto p-2;
+  }
+}
+
+/* Custom Scrollbar for inner glass area if needed */
+.glass-main::-webkit-scrollbar {
+  width: 6px;
+}
+.glass-main::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
