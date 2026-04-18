@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", "RoRoboto", sans-serif;
+  --font-sans: "Inter", "Roboto", sans-serif;
   --radius-glass: 3.5rem;
   --radius-card: 2.2rem;
   --color-glass: rgba(255, 255, 255, 0.05);

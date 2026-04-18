@@ -94,8 +94,8 @@ const SunTimeline = ({ sunrise, sunset, timezone }) => {
 const MoonPhase = ({ date }) => {
   // Simple algorithm for moon phase (approximation)
   const getMoonPhase = (d) => {
-    const year = d.getUTCFullYear();
-    const month = d.getUTCMonth() + 1;
+    let year = d.getUTCFullYear();
+    let month = d.getUTCMonth() + 1;
     const day = d.getUTCDate();
     if (month < 3) { year--; month += 12; }
     const res = Math.floor(365.25 * year) + Math.floor(30.6001 * (month + 1)) + day - 694039.09;
